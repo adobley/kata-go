@@ -1,4 +1,5 @@
 package factorprime
 
-func Factor(num int) {
+func Factor(num int) []int {
+	return []int{}
 }
