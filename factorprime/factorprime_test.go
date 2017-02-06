@@ -22,20 +22,20 @@ func TestFactorPrimeReturnsSliceWithThreeWhenFactoringThree(t *testing.T) {
 
 func assertSlicesEqual(t *testing.T, expected, actual []int) {
 	if len(expected) != len(actual) {
-		t.Errorf("Did not return expected slice:\n"+
-			"Expected: %d\n"+
-			"Actual: %d",
-			expected,
-			actual)
+		errorSlicesNotEqual(t, expected, actual)
 	}
 	for i := range actual {
 		if actual[i] != expected[i] {
-			t.Errorf("Did not return expected slice:\n"+
-				"Expected: %d\n"+
-				"Actual: %d",
-				expected,
-				actual)
+			errorSlicesNotEqual(t, expected, actual)
 		}
 	}
 
+}
+
+func errorSlicesNotEqual(t *testing.T, expected, actual []int) {
+	t.Errorf("Did not return expected slice:\n"+
+		"Expected: %d\n"+
+		"Actual: %d",
+		expected,
+		actual)
 }
