@@ -10,6 +10,12 @@ func Factor(num int) []int {
 			num /= divisor
 		}
 		divisor++
+		if divisor*divisor > num {
+			if num > 1 {
+				result = append(result, num)
+				break
+			}
+		}
 	}
 
 	return result
