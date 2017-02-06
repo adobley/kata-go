@@ -3,19 +3,19 @@ package factorprime
 import "testing"
 
 func TestFactorPrimeReturnsEmptySliceWhenFactoringOne(t *testing.T) {
-	t.Log("Returns an empty slice when factoring 1")
+	t.Log("Returns [] when factoring 1")
 	result := Factor(1)
 	assertSlicesEqual(t, []int{}, result)
 }
 
 func TestFactorPrimeReturnsSliceWithTwoWhenFactoringTwo(t *testing.T) {
-	t.Log("Returns a slice containg only 2 when factoring 2")
+	t.Log("Returns [2] when factoring 2")
 	result := Factor(2)
 	assertSlicesEqual(t, []int{2}, result)
 }
 
 func TestFactorPrimeReturnsSliceWithThreeWhenFactoringThree(t *testing.T) {
-	t.Log("Returns a slice containg only 3 when factoring 3")
+	t.Log("Returns [3] when factoring 3")
 	result := Factor(3)
 	assertSlicesEqual(t, []int{3}, result)
 }
