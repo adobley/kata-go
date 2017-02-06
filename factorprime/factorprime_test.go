@@ -26,6 +26,12 @@ func Test_FactorPrime_ReturnsSliceWithTwoTwos_WhenFactoringFour(t *testing.T) {
 	assertSlicesEqual(t, []int{2, 2}, result)
 }
 
+func Test_FactorPrime_ReturnsSliceWithFive_WhenFactoringFive(t *testing.T) {
+	t.Log("Returns [5] when factoring 5")
+	result := Factor(5)
+	assertSlicesEqual(t, []int{5}, result)
+}
+
 func assertSlicesEqual(t *testing.T, expected, actual []int) {
 	if len(expected) != len(actual) {
 		errorSlicesNotEqual(t, expected, actual)
