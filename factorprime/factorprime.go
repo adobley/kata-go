@@ -2,14 +2,14 @@ package factorprime
 
 func Factor(num int) []int {
 	result := []int{}
+	divisor := 2
 
-	if num%2 == 0 {
-		result = append(result, 2)
-		num /= 2
-	}
-
-	if num != 1 {
-		result = append(result, num)
+	for num != 1 {
+		for num%divisor == 0 {
+			result = append(result, divisor)
+			num /= divisor
+		}
+		divisor++
 	}
 
 	return result
