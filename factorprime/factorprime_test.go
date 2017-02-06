@@ -29,10 +29,12 @@ func Test_FactorPrime_ReturnsSliceWithTwoTwos_WhenFactoringFour(t *testing.T) {
 func assertSlicesEqual(t *testing.T, expected, actual []int) {
 	if len(expected) != len(actual) {
 		errorSlicesNotEqual(t, expected, actual)
+		return
 	}
 	for i := range actual {
 		if actual[i] != expected[i] {
 			errorSlicesNotEqual(t, expected, actual)
+			return
 		}
 	}
 
