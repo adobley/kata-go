@@ -2,19 +2,19 @@ package factorprime
 
 import "testing"
 
-func TestFactorPrimeReturnsEmptySliceWhenFactoringOne(t *testing.T) {
+func Test_FactorPrime_ReturnsEmptySlice_WhenFactoringOne(t *testing.T) {
 	t.Log("Returns [] when factoring 1")
 	result := Factor(1)
 	assertSlicesEqual(t, []int{}, result)
 }
 
-func TestFactorPrimeReturnsSliceWithTwoWhenFactoringTwo(t *testing.T) {
+func Test_FactorPrime_ReturnsSliceWithTwo_WhenFactoringTwo(t *testing.T) {
 	t.Log("Returns [2] when factoring 2")
 	result := Factor(2)
 	assertSlicesEqual(t, []int{2}, result)
 }
 
-func TestFactorPrimeReturnsSliceWithThreeWhenFactoringThree(t *testing.T) {
+func Test_FactorPrime_ReturnsSliceWithThree_WhenFactoringThree(t *testing.T) {
 	t.Log("Returns [3] when factoring 3")
 	result := Factor(3)
 	assertSlicesEqual(t, []int{3}, result)
