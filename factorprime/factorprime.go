@@ -1,8 +1,16 @@
 package factorprime
 
 func Factor(num int) []int {
-	if num != 1 {
-		return []int{num}
+	result := []int{}
+
+	if num%2 == 0 {
+		result = append(result, 2)
+		num /= 2
 	}
-	return []int{}
+
+	if num != 1 {
+		result = append(result, num)
+	}
+
+	return result
 }
