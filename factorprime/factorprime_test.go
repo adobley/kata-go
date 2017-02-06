@@ -22,3 +22,15 @@ func TestFactorPrimeReturnsSliceWithTwoWhenFactoringTwo(t *testing.T) {
 			result)
 	}
 }
+
+func TestFactorPrimeReturnsSliceWithThreeWhenFactoringThree(t *testing.T) {
+	t.Log("Returns a slice containg only 3 when factoring 3")
+	result := Factor(3)
+	if len(result) != 1 || result[0] != 3 {
+		t.Errorf("Did not return an slice containing only 3!\n"+
+			"Expected: %d\n"+
+			"Actual: %d",
+			[]int{3},
+			result)
+	}
+}
